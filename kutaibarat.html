@@ -1,0 +1,23 @@
+<html>
+<header>
+    <title>Kabupaten Kutai Barat</title>
+    <link rel="stylesheet" href="leaflet/leaflet.css"/>
+    <script src="leaflet/leaflet.js"></script>
+</header>
+<body>
+    <div id="kutaibarat" style="width: 900px; height: 580px;"></div>
+    <script>
+        // Membuat data peta
+        var data = {
+            center : [-0.495928, 115.811148],
+            zoom : 10
+        }
+        // Membuat objek peta
+        var map = new L.map('kutaibarat', data);
+        // Membuat layer
+        var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+        // Menambahkan layer ke peta
+        map.addLayer(layer);
+    </script>
+</body>
+</html>
